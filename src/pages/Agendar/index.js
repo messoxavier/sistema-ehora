@@ -1,13 +1,26 @@
 import React, { useState } from 'react'; 
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import * as C from "./styles";
+import img from "../../img/logo-h.png";
 
 const Agendar = () => {
   const [data, setData] = useState('');
   const [horario, setHorario] = useState([]);
   const navigate = useNavigate();
+
+  const Header = () => {
+    return (
+      <C.Header>
+        <C.img src={img} alt="Logo da medical" />
+      </C.Header>
+    );
+  }
+
   const handleChange = (event) => {
     setData(event.target.value);
+
+    
   }; 
   // função para converter para padrão brasileiro
   function converterData(data) { 
@@ -63,18 +76,26 @@ const Agendar = () => {
 
 
   return (
-    <div>
+    <C.Container>
+    <Header />
+    <C.body>
+    <C.div>
+    <C.h1>Marcar Consulta</C.h1>
     <form onSubmit={trazerConsulta}>
-      <label>
-        Data:
-        <input type="date" value={data} onChange={handleChange} />
-      </label>
-      <button type="submit">Enviar</button>
+      <C.label>
+        Data disponível:
+        <C.Input type="date" value={data} onChange={handleChange} />
+      </C.label>
+      <C.button type="submit">Enviar</C.button>
     </form>
-    {horario.length != 0 && <div>{horario.map((item) => {
-      return <input type= "button" disabled={!item.status} onClick={handleSubmit} value={item.horario} key={item.horario} />; 
-    })}</div>}
-    </div>
+    <C.p>Horário disponível</C.p>
+    {horario.length != 0 && <C.Div>{horario.map((item) => {
+      return <C.input type= "button" disabled={!item.status} onClick={handleSubmit} value={item.horario} key={item.horario} />; 
+    })}</C.Div>}
+    </C.div>
+    </C.body>
+    </C.Container>
+    
     
   );
 };
