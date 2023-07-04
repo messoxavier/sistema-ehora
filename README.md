@@ -1,3 +1,17 @@
+## sistema-ehora
+
+O software de agendamento para atendimento no posto de saúde e-Hora é uma solução intuitiva e eficiente projetada para facilitar o agendamento de consultas médicas e garantir uma melhor experiência para os pacientes.
+
+Criado e desenvolvido por Adevaldo José, Emerson Xavier e Gustavo Batista, alunos do Centro Universitário dos Guararapes (UNIFG) do Polo da Boa Vista.
+
+## Ferramentas utilizadas:
+
+<div style="display: inline_block"><br>
+  <img align="center" alt="Messo-React" height="30" width="40" src="https://github.com/devicons/devicon/blob/master/icons/react/react-original.svg">
+  <img align="center" alt="Messo-MySQL" height="30" width="40" src="https://github.com/devicons/devicon/blob/master/icons/mysql/mysql-original.svg">
+  <img align="center" alt="Messo-NodeJS" height="30" width="40" src="https://github.com/devicons/devicon/blob/master/icons/nodejs/nodejs-original.svg">
+<div/>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
