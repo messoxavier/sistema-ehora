@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
 import * as C from "./styles";
-import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import axios from "axios";
 import img from "../../img/logo-h.png"
@@ -15,8 +15,8 @@ const Signin = () => {
   const [senha, setSenha] = useState("");
   const [error, setError] = useState("");
 
-  const handleLogin = () => {
-    if (!email | !senha) {
+  const handleLogin = async () => {
+    if (!email || !senha) {
       setError("Preencha todos os campos");
       return;
     }
@@ -27,23 +27,28 @@ const Signin = () => {
       setError(res);
       return;
     } */
-    
-    const usuario = {
-      "cpf": email,
-      "senha": senha
-  }
 
-  axios.post('http://localhost:3000/usuario/login', usuario
-  ).then((response) => {
+    try {
+    const usuario = {
+      cpf: email,
+      senha: senha,
+  };
+      
+    const response = await axios.post(
+      "http://localhost:3000/usuario/login",
+       usuario
+    );
+
     const user = {
-      "usuario":response.data.usuario,
-      "token":response.data.token
-    }
-    localStorage.setItem("usuario", JSON.stringify(user))
+      usuario: response.data.usuario,
+      token: response.data.token,
+    };
+  
+    localStorage.setItem("usuario", JSON.stringify(user));
     navigate("/home");
-  }).catch(error => {
+  } catch(error) {
     alert(error.response.data.mensagem)
-  });
+  };
 
   };
 
