@@ -24,7 +24,7 @@ export const img = styled.img`
   margin-bottom: 20px;
 `;
 
-export const body = styled.div`
+export const Body = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,7 +46,7 @@ export const Div = styled.div`
   height: 25%;
 `;
 
-export const h1 = styled.h1`
+export const H1 = styled.h1`
   color: #909090;
   cursor: pointer;
   margin: 20px;
