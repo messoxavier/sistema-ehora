@@ -28,21 +28,30 @@ const Home = () => {
   return (
     <C.Container>
       <Header />
-      <C.body>
-       <C.Div> 
-      <C.h1 onClick={handleMarcarConsulta}>Marcar Consulta</C.h1>
-      <C.Icon src={img1} alt="Ícone de agendamento" />
-      <C.Paragraph>Agende uma consulta presencial, com um de nossos especialistas.</C.Paragraph>
-      </C.Div>
-      <C.Div>
-      <C.h1 onClick={handleVerConsultasAgendadas}>Consulta Agendada</C.h1>
-      <C.Icon src={img2} alt="Ícone de consulta" />
-      <C.Paragraph>Veja suas próximas consultas agendadas.</C.Paragraph>
-      </C.Div>
-      </C.body>
-      <Button Text="Sair" onClick={() => [signout(), navigate("/")]}>
-        Sair
-      </Button>
+      <C.Body>
+        <C.Div> 
+          <C.H1 onClick={handleMarcarConsulta}>Marcar Consulta</C.H1>
+          <C.Icon src={img1} alt="Ícone de agendamento" />
+          <C.Paragraph>
+            Agende uma consulta presencial, com um de nossos especialistas.
+            </C.Paragraph>
+        </C.Div>
+        <C.Div>
+          <C.H1 onClick={handleVerConsultasAgendadas}>Consulta Agendada</C.H1>
+          <C.Icon src={img2} alt="Ícone de consulta" />
+          <C.Paragraph>
+            Veja suas próximas consultas agendadas.
+            </C.Paragraph>
+        </C.Div>
+        </C.Body>
+        <Button 
+          Text="Sair" 
+          onClick={() => [
+            signout(), navigate("/")
+          ]}
+        >
+          Sair
+        </Button>
     </C.Container>
   );
 };
