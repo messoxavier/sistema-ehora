@@ -37,14 +37,30 @@ export const h1 = styled.h1`
   margin-bottom: 50px;
   margin-right: 400px;
   margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+  }
 `;
 
 export const p = styled.p`
   color: white;
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+  }
 `;
 
 export const label = styled.label`
     color: white;
+
+    @media (max-width: 768px) {
+      margin-left: 10px;
+    }
 `;
 
 export const Div = styled.div`
