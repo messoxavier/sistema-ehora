@@ -34,6 +34,11 @@ export const Body = styled.div`
   max-width: 350px;
   padding: 20px;
   background-color: #203197;
+
+  @media (max-width: 768px) {
+    padding: 5px;
+    width: 50%;
+  }
 `;
 
 export const Div = styled.div`
@@ -44,6 +49,14 @@ export const Div = styled.div`
   margin-bottom: 20px;
   width: 200%;
   height: 25%;
+
+  @media (max-width: 768px) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 1024px) {
+    margin-bottom: 20px;
+  }
 `;
 
 export const H1 = styled.h1`
@@ -53,19 +66,43 @@ export const H1 = styled.h1`
   margin-bottom: 50px;
   margin-left: 50px;
   margin-right: 250px;
+
+  @media (max-width: 768px) {
+    font-size: 25px;
+    margin: 10px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    margin-top: 20px;
+  }
 `;
 
 export const Paragraph = styled.p`
   color: #909090;
   margin: 20px;
   margin-left: 40px;
+
+  @media (max-width: 768px) {
+    margin: 25px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  
+  @media (min-width: 1280px) {
+    margin: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
 `;
 
 export const Icon = styled.img`
   width: 120px;
   float: right;
-  margin-top: -10%;
+  margin-top: -15%;
   margin-right: 40px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 
